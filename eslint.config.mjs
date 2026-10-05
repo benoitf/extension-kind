@@ -27,7 +27,6 @@ import { FlatCompat } from '@eslint/eslintrc';
 import unicorn from 'eslint-plugin-unicorn';
 import noNull from 'eslint-plugin-no-null';
 import sonarjs from 'eslint-plugin-sonarjs';
-import redundantUndefined from 'eslint-plugin-redundant-undefined';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import fileProgress from 'eslint-plugin-file-progress';
 
@@ -69,7 +68,6 @@ export default [
       'file-progress': fixupPluginRules(fileProgress),
       import: fixupPluginRules(importPlugin),
       'no-null': fixupPluginRules(noNull),
-      'redundant-undefined': fixupPluginRules(redundantUndefined),
       'simple-import-sort': fixupPluginRules(simpleImportSort),
     },
     settings: {
@@ -187,9 +185,6 @@ export default [
       // failing with the AST parser
       'sonarjs/sonar-no-fallthrough': 'off',
       'sonarjs/prefer-enum-initializers': 'off',
-
-      // redundant-undefined custom rules
-      'redundant-undefined/redundant-undefined': 'error',
 
       // simple-import-sort custom rules
       'simple-import-sort/imports': 'error',
